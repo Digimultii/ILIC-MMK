@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #141414; 
@@ -310,7 +311,7 @@ table.prehrana-tablica {
     display: inline-block;
     letter-spacing: 0.6px;
 
-    /* animacije */
+    
     transition: 
         background-color 0.25s ease,
         transform 0.2s ease,
@@ -329,4 +330,52 @@ table.prehrana-tablica {
     transform: translateY(0) scale(0.96);
     box-shadow: 0 3px 10px rgba(0,0,0,0.20);
 }
+
+
+#predaja-mediji a {
+  color: #38680d;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#predaja-mediji a:hover {
+  color: #d9534f;
+  transform: scale(1.05);
+}
+
+
+
+#predaja-mediji img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#predaja-mediji img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+
+
+form#savjeti input:focus,
+form#savjeti select:focus {
+  border-color: #d9534f;
+  box-shadow: 0 0 5px rgba(217,83,79,0.6);
+  transition: box-shadow 0.2s ease;
+}
+
+
+form#savjeti button {
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+form#savjeti button:hover {
+  background-color: #5c823e;
+  transform: translateY(-2px);
+}
+
+form#savjeti button:active {
+  transform: scale(0.95);
+}
+
+
 
