@@ -377,4 +377,63 @@ form#savjeti button:active {
 }
 
 
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container h1 {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+
+.container > p {
+  font-size: 1.05em;
+}
+
+h2 + p {
+  font-style: italic;
+  color: #555;
+}
+
+
+.izdvojeni-odjeljak ~ p {
+  background-color: #f9f9f9;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.prehrana-tablica tbody tr:nth-child(2n) {
+  font-weight: bold;
+}
+
+
+#predaja-mediji p:nth-of-type(2) {
+  color: #38680d;
+}
+
+#predaja-mediji .klikni-me {
+  animation: puls 2s infinite;
+}
+
+@keyframes puls {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
 
