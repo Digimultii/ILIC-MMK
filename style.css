@@ -433,7 +433,66 @@ h2 + p {
     transform: scale(1);
   }
 }
+/* 3D KONTEKST */
+.klikni-me {
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
 
+
+.klikni-me:hover {
+    transform: rotateX(15deg) rotateY(-15deg);
+}
+
+
+.klikni-me:active {
+    transform: rotateX(0deg) rotateY(0deg) scale(0.95);
+}
+
+
+@keyframes lebdenje {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.klikni-me {
+    animation: lebdenje 3s ease-in-out infinite;
+}
+/* KONTEJNER PSA */
+.pas-wrapper {
+    position: sticky;
+    top: 120px;
+    float: right;
+    margin-left: 30px;
+    perspective: 1000px;
+}
+
+/* SLIKA PSA */
+.pas-3d {
+    width: 220px;
+    animation: lebdenjePsa 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+/* 3D INTERAKCIJA */
+.pas-3d:hover {
+    transform: rotateY(-15deg) rotateX(8deg) scale(1.05);
+}
+
+/* ANIMACIJA LEBDENJA */
+@keyframes lebdenjePsa {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
 
 
 
